@@ -3,10 +3,22 @@
   .bouton_commander {
     vertical-align: middle;
     margin: 0 auto;
-    height: 50px;
+    height: $bouton-commander-height;
     color: white;
-    width: 50%;
+    width: 60%;
     text-align: center;
-    border-radius: 25px;
+    border-radius: $bouton-commander-radius;
     background: linear-gradient(to bottom right,$colour-secondary,$colour-primary);
+}
+
+.bouton_explorer {
+  
+  margin: 0 auto;
+  height: $bouton-explorer-height;
+  font-size: 15px;
+  color: white;
+  width: 70%;
+  text-align: center;
+  border-radius: $bouton-explorer-radius;
+  background: linear-gradient(to bottom right,$colour-secondary,$colour-primary);
 }
