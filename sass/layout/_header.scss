@@ -15,8 +15,32 @@
 
 
 .logo {
+    height: 40px;
+    line-height: 40px;
     margin: 0 auto;
     font-family: "Shrikhand";
     font-size: 3rem;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+header i {
+    position:absolute;
+    top:30px;
+    left:80px;
+    font-weight: 900;
+    
+}
+
+.recherche {
+    text-align: center;
+}
+
+.h2_accueil_header {
+    width: 60%;
+}
+
+.recherche p {
+    margin-bottom: 20px;
 }

@@ -4,6 +4,9 @@ $colour-tertiary: #99E2D0;
 $colour-font: black;
 $colour-footer: #353535;
 $colour-background: #F0F0F0;
+$colour-recherche: #E0E0E0;
+$colour-border-recherche: #D0D0D0;
+
 $image_width: 375px;
 
 
@@ -28,6 +31,12 @@ $bouton-explorer-radius : $bouton-explorer-height *.5;
 
 $bouton-commander-height: 50px;
 $bouton-commander-radius : $bouton-commander-height *.5;
+
+$hue: hue($colour-primary);
+$sat: 100%;
+$light: 93%;
+$pastelviolet: hsl($hue,$sat,$light);
+
 
 
 

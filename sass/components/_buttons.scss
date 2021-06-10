@@ -1,24 +1,27 @@
 
 
   .bouton_commander {
-    vertical-align: middle;
     margin: 0 auto;
     height: $bouton-commander-height;
+    line-height: $bouton-commander-height;
+    text-align: center;
     color: white;
     width: 60%;
-    text-align: center;
     border-radius: $bouton-commander-radius;
     background: linear-gradient(to bottom right,$colour-secondary,$colour-primary);
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 .bouton_explorer {
-  
   margin: 0 auto;
   height: $bouton-explorer-height;
+  line-height: $bouton-explorer-height;
+  text-align: center;
   font-size: 15px;
   color: white;
   width: 70%;
-  text-align: center;
   border-radius: $bouton-explorer-radius;
   background: linear-gradient(to bottom right,$colour-secondary,$colour-primary);
+  margin-bottom: 50px;
 }

@@ -13,7 +13,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background: #FF79DA;
+  background-color: white;
   width: 375px;
   margin: 0 auto;
 }
@@ -25,10 +25,10 @@ main, footer {
 
 * {
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   background-color: #F0F0F0;
   font-size: 2rem;
   font-weight: 100;
@@ -42,21 +42,24 @@ h1 {
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
   font-weight: 550;
   margin: 20px auto;
   font-size: 3rem;
   color: grey;
 }
 
+.h2_accueil {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
 textarea {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 2rem;
 }
 
 button {
-  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: italic;
   font-size: 2.75rem;
@@ -67,33 +70,41 @@ button {
 }
 
 .title_index {
-  font-family: "Roboto", sans-serif;
   font-weight: 550;
   margin: 20px auto;
   font-size: 3rem;
   color: grey;
 }
 
+p {
+  font-size: 16px;
+  color: grey;
+}
+
 .bouton_commander {
-  vertical-align: middle;
   margin: 0 auto;
   height: 50px;
+  line-height: 50px;
+  text-align: center;
   color: white;
   width: 60%;
-  text-align: center;
   border-radius: 25px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .bouton_explorer {
   margin: 0 auto;
   height: 45px;
+  line-height: 45px;
+  text-align: center;
   font-size: 15px;
   color: white;
   width: 70%;
-  text-align: center;
   border-radius: 22.5px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  margin-bottom: 50px;
 }
 
 .header {
@@ -112,38 +123,98 @@ button {
 }
 
 .logo {
+  height: 40px;
+  line-height: 40px;
   margin: 0 auto;
   font-family: "Shrikhand";
   font-size: 3rem;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+header i {
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  font-weight: 900;
+}
+
+.recherche {
+  text-align: center;
+}
+
+.h2_accueil_header {
+  width: 60%;
+}
+
+.recherche p {
+  margin-bottom: 20px;
+}
+
+.champ_recherche {
+  background-color: #E0E0E0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-top: 3px solid #D0D0D0;
+}
+.champ_recherche_input {
+  background-color: #E0E0E0;
+  border: none;
+  font-weight: 600;
 }
 
 .fonctionnements {
   background-color: white;
-  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.fonctionnements .h2_accueil, .restaurants .h2_accueil {
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .fonctionnement {
+  margin: 0 auto;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  width: 90%;
-  border: 1px solid #9356DC;
+  font-size: 18px;
   background-color: #F0F0F0;
-  box-shadow: 10px 10px 10px grey;
+  align-items: center;
+  height: 70px;
+  width: 90%;
+  box-shadow: 5px 5px 5px #c4c0c0;
   border-radius: 20px 20px 20px 20px;
-  margin-bottom: 10px;
-}
-.fonctionnement:active {
-  background-color: #FF79DA;
+  margin-bottom: 20px;
 }
 .fonctionnement__cercle {
+  display: flex;
   background-color: #9356DC;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   margin-left: -15px;
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  color: white;
+}
+.fonctionnement__icon {
+  text-align: center;
+  width: 50px;
+  color: grey;
+}
+
+.pastel_purple {
+  background-color: #ecdbff;
+}
+
+.purple_icon {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -166,13 +237,14 @@ button {
   align-items: center;
 }
 .restaurant__name {
+  font-size: 18px;
   font-weight: 700;
 }
 .restaurant__location {
   font-size: 15px;
 }
 
-.liste_plats {
+.menu {
   background-color: #F0F0F0;
   padding-left: 20px;
   padding-right: 20px;
@@ -180,16 +252,16 @@ button {
   padding-top: 30px;
   border-radius: 30px 30px 0 0;
   z-index: 1;
-  /*border : 2px solid red;*/
 }
-.liste_plats__title {
+.menu__title {
+  font-family: Shrikhand;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
 }
-.liste_plats__title__icon {
+.menu__title__icon {
   color: grey;
 }
 
@@ -238,12 +310,20 @@ footer li {
   width: 30px;
 }
 
-.img_restaurant {
+.img_restaurants {
   width: 100%;
   object-fit: cover;
   object-position: 0% 60%;
   height: 180px;
   margin-top: -15px;
+}
+
+.img_restaurant {
+  width: 100%;
+  object-fit: cover;
+  object-position: 0% 60%;
+  height: 250px;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */

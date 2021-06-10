@@ -1,5 +1,4 @@
 body {
-    font-family: 'Roboto', sans-serif;
     background-color: $colour-background;
     font-size: 2rem;
     font-weight: 100;
@@ -13,21 +12,24 @@ h1 {
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 550;
     margin: 20px auto;
     font-size: 3rem;
     color: grey ;
 }
 
+.h2_accueil {
+    font-size: 20px;
+    font-weight: 700;
+    color: black
+}
+
 textarea {
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 2rem;
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-style: italic;
     font-size: 2.75rem;
@@ -39,9 +41,16 @@ button {
 
 
 .title_index {
-    font-family: 'Roboto', sans-serif;
     font-weight: 550;
     margin: 20px auto;
     font-size: 3rem;
     color: grey ;
 }
+
+p { font-size: 16px;
+color: grey}
+
+
+
+$font_size_restaurant_name : 18px;
+$font_size_restaurant_location : $font_size_restaurant_name - 3
