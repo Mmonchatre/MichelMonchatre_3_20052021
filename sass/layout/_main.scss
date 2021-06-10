@@ -100,7 +100,15 @@
     }
 }
 
+.restaurant i {
+    
+    transition: all 450ms;
 
+    &:hover {
+        transform: scale(1.13);
+        color: $colour-primary;
+    }
+}
 
 .menu {
     background-color: $colour-background;

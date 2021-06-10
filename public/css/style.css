@@ -93,6 +93,10 @@ p {
   margin-top: 40px;
   margin-bottom: 50px;
 }
+.bouton_commander:hover {
+  background: linear-gradient(to bottom right, #fface8, #ae80e5);
+  box-shadow: 0px 0px 10px 0px #3b2e30;
+}
 
 .bouton_explorer {
   margin: 0 auto;
@@ -105,6 +109,10 @@ p {
   border-radius: 22.5px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   margin-bottom: 50px;
+}
+.bouton_explorer:hover {
+  background: linear-gradient(to bottom right, #fface8, #ae80e5);
+  box-shadow: 0px 0px 10px 0px #3b2e30;
 }
 
 .header {
@@ -242,6 +250,14 @@ header i {
 }
 .restaurant__location {
   font-size: 15px;
+}
+
+.restaurant i {
+  transition: all 450ms;
+}
+.restaurant i:hover {
+  transform: scale(1.13);
+  color: #9356DC;
 }
 
 .menu {
