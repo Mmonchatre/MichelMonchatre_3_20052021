@@ -9,21 +9,27 @@
     opacity: .8;
     animation: spin-back 3s ease-in forwards;
 }
-  .spin-front {
-      position: fixed;
+
+.spin-middle {
+  position: fixed;
   top: 50%;
-  left: 44.5%;
+  left: 50%;
+}
+
+  .spin-front {position: relative;
+  top: -50px;
+  left: -50px;
   border: 30px solid #0042A4;
   border-radius: 50%;
   border-top: 30px solid $colour-primary;
   border-right: 30px solid $colour-secondary;
   border-bottom: 30px solid $colour-tertiary;
   border-left: 30px solid #C9E0FF;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   -webkit-animation: spin 2s ease-in forwards;
-  animation: spin 2s ease-in forwards;
-  animation-timing-function: cubic-bezier(.53,.01,.2,1);
+  animation: spin 1500ms ease-in linear forwards;
+  /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
   
 }
 @-webkit-keyframes spin {

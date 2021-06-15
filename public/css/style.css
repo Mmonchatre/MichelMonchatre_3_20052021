@@ -15,7 +15,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: white;
-  width: 375px;
+  /*width: 375px; */
   margin: 0 auto;
 }
 
@@ -126,21 +126,27 @@ p {
   animation: spin-back 3s ease-in forwards;
 }
 
-.spin-front {
+.spin-middle {
   position: fixed;
   top: 50%;
-  left: 44.5%;
+  left: 50%;
+}
+
+.spin-front {
+  position: relative;
+  top: -50px;
+  left: -50px;
   border: 30px solid #0042A4;
   border-radius: 50%;
   border-top: 30px solid #9356DC;
   border-right: 30px solid #FF79DA;
   border-bottom: 30px solid #99E2D0;
   border-left: 30px solid #C9E0FF;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   -webkit-animation: spin 2s ease-in forwards;
-  animation: spin 2s ease-in forwards;
-  animation-timing-function: cubic-bezier(0.53, 0.01, 0.2, 1);
+  animation: spin 1500ms ease-in linear forwards;
+  /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
 }
 
 @-webkit-keyframes spin {
