@@ -104,55 +104,33 @@
     
     transition: all 450ms;
 
-    &:hover {
+    /*&:hover {
         transform: scale(1.13);
         color: $colour-primary;
-    }
+    }*/
 }
 
-.menu {
-    background-color: $colour-background;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    margin-top: -30px;
-    padding-top: 30px;
-    border-radius: 30px 30px 0 0;
-    z-index: 1;
-    &__title {
-        font-family: Shrikhand;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 30px;
-        font-weight: 500;
-        &__icon {
-            color: grey;
-        }
-    }
+.jauge {
+    height: 50px;
+    width:50px;
+    display: block;
+    /*background-color: #b467a4;*/
+    color:#b467a4;
+    position: relative;
 }
 
-.plat { 
+.jauge-remplissage {
+    transition: all 0.9s linear 0s;
+    /*background-color: #33BEE5;*/
+    color: #33BEE5;
     width: 100%;
-    font-size: 1.7rem;
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow:  8px 8px 5px #E0E0E0;
-    height: 80px;
-    margin-bottom: 20px;
-
-    &__titre {
-        font-weight: 700;
-    }
-
-    &__note {
-        font-size: 1,8rem;
-           display: flex;
-    }
-
-    &__prix {
-        font-weight: 900;
-        margin-left: auto;
-    }
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
+ 
+.jauge:hover .jauge-remplissage {
+    height: 100%;
+}
+
