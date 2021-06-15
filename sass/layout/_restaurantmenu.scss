@@ -104,6 +104,7 @@
 
 /*  animation translation prix et rotation icone */
 .anim_prix {
+  font-weight: 700;
   position: relative;
   top: -15px;
   right: 30px;
@@ -175,39 +176,39 @@
   }
 
 
-.plat:nth-child(3) {
+.plat:nth-child(4) {
     animation-delay: 0.0s;
   }
   
-  .plat:nth-child(4) {
+  .plat:nth-child(5) {
     animation-delay: 0.2s;
   }
   
-  .plat:nth-child(5) {
+  .plat:nth-child(6) {
     animation-delay: 0.4s;
   }
   
-  .plat:nth-child(7) {
+  .plat:nth-child(9) {
     animation-delay: 0.6s;
   }
   
-  .plat:nth-child(8) {
+  .plat:nth-child(10) {
     animation-delay: 0.8s;
   }
   
-  .plat:nth-child(9) {
+  .plat:nth-child(11) {
     animation-delay: 1.0s;
   }
   
-  .plat:nth-child(11) {
+  .plat:nth-child(14) {
     animation-delay: 1.2s;
   }
   
-  .plat:nth-child(12) {
+  .plat:nth-child(15) {
     animation-delay: 1.4s;
   }
   
-  .plat:nth-child(13) {
+  .plat:nth-child(16) {
     animation-delay: 1.6s;
   }
 

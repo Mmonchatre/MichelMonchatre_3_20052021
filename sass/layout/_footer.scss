@@ -12,9 +12,12 @@
     }
 }
 
-footer li {
+footer li  {
     font-size: 14px;
     list-style: none;
+    &  > a {
+    color: white;
+    }
 }
 
 .footer i {
