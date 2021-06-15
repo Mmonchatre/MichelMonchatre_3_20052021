@@ -15,11 +15,51 @@
         align-items: center;
         font-size: 30px;
         font-weight: 500;
-        &__icon {
+        &__heart {
             color: grey;
         }
     }
 }
+
+.menu__title__heart {
+  
+  cursor: pointer;
+}
+
+.remplissage {
+  font-size: 30px;
+  color:#b467a4;
+  position: relative;
+  left: -31px;
+  display: flex;
+  transform: scale(0);    
+  width: max-content;
+}
+
+@keyframes remplissage{
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1.05);
+  }
+}
+
+.menu__title__heart:hover + .remplissage {
+  animation-name  : remplissage;
+  animation-duration:  250ms;
+  animation-delay:150ms;
+  animation-fill-mode: both;
+}
+
+.H2_underline {
+  position: relative;
+  top: -25px;
+  width:75px;
+  height:4px;
+  background-color: $colour-tertiary;
+}
+
 
 .plat { 
   display: flex;
@@ -121,6 +161,7 @@
         }
     }
 
+/* affichage liste plat en décalé */
 
 @keyframes plat {
     0% {
