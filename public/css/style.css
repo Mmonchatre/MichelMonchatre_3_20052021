@@ -425,6 +425,15 @@ footer li {
   width: 40px;
   color: #99E2D0;
 }
+.anim_prix:hover > .anim_prix--prix {
+  transform: translateX(110px);
+}
+.anim_prix:hover > .anim_prix--fond {
+  transform: translateX(110px);
+}
+.anim_prix:hover > .anim_prix--icone {
+  transform: translateX(110px) rotate(0deg);
+}
 
 @keyframes plat {
   0% {

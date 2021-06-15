@@ -23,35 +23,30 @@
 
 .plat { 
   display: flex;
-
   overflow: hidden;
     width: 100%;
     font-size: 1.7rem;
     background-color: white;
     padding: 15px 0px 15px 15px;
-    
     border-radius: 10px;
     box-shadow:  8px 8px 5px #E0E0E0;
     height: 80px;
     margin-bottom: 20px;
-
     &__desc {
       flex-direction: column;
       width: 100%;
       &:hover + .anim_prix {
-      
         & > .anim_prix--prix {
-          transform: translateX(110px);
+          transform: translateX(110px);   
         }
           & > .anim_prix--fond {
           transform: translateX(110px);
         }
           & > .anim_prix--icone {
-              transform: translateX(110px) rotate(0deg) ;
+          transform: translateX(110px) rotate(0deg) ; 
           }
-        }
-    }
-
+       }
+      }
     &__titre {
         font-weight: 700;
     }
@@ -67,14 +62,7 @@
     }
 }
 
-
-
-
-  /*  animation translation prix et rotation icone */
-
-  
-
-
+/*  animation translation prix et rotation icone */
 .anim_prix {
   position: relative;
   top: -15px;
@@ -90,6 +78,7 @@
     top:15px;
     transform: translateX(200px);
     transition: transform 500ms ease-in-out;
+    
   }
   &--fond {
     position: relative;
@@ -119,11 +108,18 @@
          color:$colour-tertiary;
         } 
       }
+      &:hover {
+        & > .anim_prix--prix {
+          transform: translateX(110px);   
+        }
+          & > .anim_prix--fond {
+          transform: translateX(110px);
+        }
+          & > .anim_prix--icone {
+          transform: translateX(110px) rotate(0deg) ; 
+          }
+        }
     }
-
-
-
-
 
 
 @keyframes plat {
