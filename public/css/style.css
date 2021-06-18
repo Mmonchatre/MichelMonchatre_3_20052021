@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 550;
+  font-weight: 600;
   margin: 20px auto;
   font-size: 3rem;
   color: grey;
@@ -71,7 +71,7 @@ button {
 }
 
 .title_index {
-  font-weight: 550;
+  font-weight: 600;
   margin: 20px auto;
   font-size: 3rem;
   color: grey;
@@ -145,7 +145,7 @@ p {
   width: 100px;
   height: 100px;
   -webkit-animation: spin 2s ease-in forwards;
-  animation: spin 1500ms ease-in linear forwards;
+  animation: spin 1500ms ease-in forwards;
   /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
 }
 
@@ -205,7 +205,7 @@ p {
 header i {
   position: absolute;
   top: 30px;
-  left: 80px;
+  left: 20px;
   font-weight: 900;
 }
 
@@ -369,6 +369,8 @@ footer li > a {
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   background-color: #F0F0F0;
   padding-left: 20px;
   padding-right: 20px;
@@ -378,6 +380,7 @@ footer li > a {
   z-index: 1;
 }
 .menu__title {
+  width: 100%;
   font-family: Shrikhand;
   display: flex;
   justify-content: space-between;
@@ -385,11 +388,111 @@ footer li > a {
   font-size: 30px;
   font-weight: 500;
 }
-.menu__title__heart {
-  color: grey;
+
+.liste_plats {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.menu__title__heart {
+.plats {
+  min-width: 300px;
+  width: 33%;
+}
+
+/*  animation translation prix et rotation icone */
+.plat {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 5px #d8d2d2;
+  display: flex;
+  flex-grow: 1;
+  max-width: 350px;
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: 1000ms ease 0ms 1 normal both running plat;
+}
+.plat__contenu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+}
+.plat__desc {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.plat__prix {
+  font-weight: 700;
+  padding-right: 0;
+  transition: padding-right 300ms linear;
+  margin: 0 10px;
+}
+.plat__titre {
+  font-size: 18px;
+  font-weight: 700;
+}
+.plat__note {
+  font-size: 16px;
+}
+
+.valid_v2 {
+  background: #99E2D0;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -80px;
+  transition: right 300ms linear;
+}
+
+.check_icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  line-height: 40px;
+  text-align: center;
+  background-color: white;
+  color: #99E2D0;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.plat:hover {
+  cursor: pointer;
+}
+
+.offset_v2 {
+  width: 0px;
+  transition: width 300ms linear;
+}
+
+.plat:hover .valid_v2 {
+  right: 0px;
+}
+
+.plat:hover .plat__prix {
+  padding-right: 80px;
+}
+
+.plat:hover .check_icon {
+  transform: rotate(360deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.heart {
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: grey;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
@@ -397,9 +500,10 @@ footer li > a {
   font-size: 30px;
   color: #b467a4;
   position: relative;
-  left: -31px;
+  top: -19px;
   display: flex;
   transform: scale(0);
+  transform-origin: bottom;
   width: max-content;
 }
 
@@ -411,7 +515,7 @@ footer li > a {
     transform: scale(1.05);
   }
 }
-.menu__title__heart:hover + .remplissage {
+.heart:hover + .remplissage {
   animation-name: remplissage;
   animation-duration: 250ms;
   animation-delay: 150ms;
@@ -426,98 +530,6 @@ footer li > a {
   background-color: #99E2D0;
 }
 
-.plat {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  font-size: 1.7rem;
-  background-color: white;
-  padding: 15px 0px 15px 15px;
-  border-radius: 10px;
-  box-shadow: 8px 8px 5px #E0E0E0;
-  height: 80px;
-  margin-bottom: 20px;
-  animation: 1000ms ease 0ms 1 normal both running plat;
-}
-.plat__desc {
-  flex-direction: column;
-  width: 100%;
-}
-.plat__desc:hover + .anim_prix > .anim_prix--prix {
-  transform: translateX(110px);
-}
-.plat__desc:hover + .anim_prix > .anim_prix--fond {
-  transform: translateX(110px);
-}
-.plat__desc:hover + .anim_prix > .anim_prix--icone {
-  transform: translateX(110px) rotate(0deg);
-}
-.plat__titre {
-  font-weight: 700;
-}
-.plat__note {
-  font-size: 1.6rem;
-}
-.plat:hover {
-  cursor: pointer;
-}
-
-/*  animation translation prix et rotation icone */
-.anim_prix {
-  font-weight: 700;
-  position: relative;
-  top: -15px;
-  right: 30px;
-  display: flex;
-  height: 80px;
-  width: 200px;
-  align-items: center;
-}
-.anim_prix--prix {
-  width: 0px;
-  position: relative;
-  right: 80px;
-  top: 15px;
-  transform: translateX(200px);
-  transition: transform 500ms ease-in-out;
-}
-.anim_prix--fond {
-  position: relative;
-  right: 36px;
-  height: 80px;
-  width: 80px;
-  background: #99E2D0;
-  transform: translateX(200px);
-  transition: transform 500ms ease-in-out;
-}
-.anim_prix--icone {
-  position: relative;
-  right: 95px;
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  background: white;
-  color: #99E2D0;
-  transform: translateX(200px) rotate(-360deg);
-  transition: transform 500ms ease-in-out;
-}
-.anim_prix--icone i {
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  width: 40px;
-  color: #99E2D0;
-}
-.anim_prix:hover > .anim_prix--prix {
-  transform: translateX(110px);
-}
-.anim_prix:hover > .anim_prix--fond {
-  transform: translateX(110px);
-}
-.anim_prix:hover > .anim_prix--icone {
-  transform: translateX(110px) rotate(0deg);
-}
-
 /* affichage liste plat en décalé */
 @keyframes plat {
   0% {
@@ -529,40 +541,16 @@ footer li > a {
     opacity: 1;
   }
 }
-.plat:nth-child(4) {
+.plat:nth-child(3) {
   animation-delay: 0s;
 }
 
-.plat:nth-child(5) {
+.plat:nth-child(4) {
   animation-delay: 0.2s;
 }
 
-.plat:nth-child(6) {
+.plat:nth-child(5) {
   animation-delay: 0.4s;
-}
-
-.plat:nth-child(9) {
-  animation-delay: 0.6s;
-}
-
-.plat:nth-child(10) {
-  animation-delay: 0.8s;
-}
-
-.plat:nth-child(11) {
-  animation-delay: 1s;
-}
-
-.plat:nth-child(14) {
-  animation-delay: 1.2s;
-}
-
-.plat:nth-child(15) {
-  animation-delay: 1.4s;
-}
-
-.plat:nth-child(16) {
-  animation-delay: 1.6s;
 }
 
 /*# sourceMappingURL=style.css.map */
