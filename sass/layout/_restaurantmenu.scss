@@ -19,22 +19,21 @@
           align-items: center;
           font-size: 30px;
           font-weight: 500;
-  
           }
       }
 
 
 .liste_plats {
-  margin-left: 20px;
-  margin-right:20px;  
+
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 .plats {
   min-width: 300px;
-  width: 33%;
+  /*width: 33%;*/
 }
 
 /*  animation translation prix et rotation icone */
@@ -45,7 +44,7 @@
   box-shadow: 2px 2px 5px rgb(216, 210, 210); 
   display: flex;
   flex-grow: 1;
-  max-width: 350px;
+  width: 95%;
   position: relative;
   height: 80px;
   overflow: hidden;
@@ -131,12 +130,6 @@
 }
 
 
-
-
-
-
-
-
 .heart {
   align-items: center;
   font-size: 30px;
@@ -147,15 +140,24 @@
   cursor: pointer;
 }
 
+
+
 .remplissage {
   font-size: 30px;
-  color:#b467a4;
+  background:-moz-linear-gradient(totop, #e691b8 0%, #ad0a6f 100%); 
+    background: -webkit-linear-gradient(to top, #e691b8 0%,#ad0a6f 100%); 
+    background: linear-gradient(to top, #e691b8 0%,#ad0a6f 100%);
+  
   position: relative;
   top: -19px;
   display: flex;
   transform: scale(0);  
   transform-origin: bottom;  
   width: max-content;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color:transparent;
 }
 
 @keyframes remplissage{
@@ -183,7 +185,7 @@
 }
 
 
-/* affichage liste plat en décalé */
+/* affichage plats en décalé */
 
 @keyframes plat {
     0% {

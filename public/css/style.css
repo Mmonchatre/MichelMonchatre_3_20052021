@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*$colour-accent: */
 *,
 *::after,
 *::before {
@@ -278,10 +277,6 @@ header i {
   color: grey;
 }
 
-.pastel_purple {
-  background-color: #ecdbff;
-}
-
 .purple_icon {
   color: #9356DC;
 }
@@ -326,6 +321,17 @@ header i {
   height: 100%;
 }
 
+@media screen and (max-width: 575px) {
+  .liste_plats {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .plats {
+    min-width: 300px;
+    width: 100%;
+  }
+}
 .footer {
   width: 100%;
   background-color: #353535;
@@ -390,8 +396,6 @@ footer li > a {
 }
 
 .liste_plats {
-  margin-left: 20px;
-  margin-right: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -399,7 +403,7 @@ footer li > a {
 
 .plats {
   min-width: 300px;
-  width: 33%;
+  /*width: 33%;*/
 }
 
 /*  animation translation prix et rotation icone */
@@ -409,7 +413,7 @@ footer li > a {
   box-shadow: 2px 2px 5px #d8d2d2;
   display: flex;
   flex-grow: 1;
-  max-width: 350px;
+  width: 95%;
   position: relative;
   height: 80px;
   overflow: hidden;
@@ -498,13 +502,19 @@ footer li > a {
 
 .remplissage {
   font-size: 30px;
-  color: #b467a4;
+  background: -moz-linear-gradient(totop, #e691b8 0%, #ad0a6f 100%);
+  background: -webkit-linear-gradient(to top, #e691b8 0%, #ad0a6f 100%);
+  background: linear-gradient(to top, #e691b8 0%, #ad0a6f 100%);
   position: relative;
   top: -19px;
   display: flex;
   transform: scale(0);
   transform-origin: bottom;
   width: max-content;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes remplissage {
@@ -530,7 +540,7 @@ footer li > a {
   background-color: #99E2D0;
 }
 
-/* affichage liste plat en décalé */
+/* affichage plats en décalé */
 @keyframes plat {
   0% {
     transform: translateY(30px);
