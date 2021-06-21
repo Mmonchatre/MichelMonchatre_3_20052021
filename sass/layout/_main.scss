@@ -47,8 +47,7 @@
         display: flex;
         background-color: $colour-primary;
         justify-content: center;
-        align-items:center ;
-        position: relative;
+        align-items:center ;        
         margin-left: -15px;
         height: 30px;
         width: 30px;
@@ -108,16 +107,6 @@
     }
 }
 
-.restaurant i {
-    
-    /*transition: all 450ms;    ???? */
-
-    /*&:hover {
-        transform: scale(1.13);
-        color: $colour-primary;
-    }*/
-}
-
 
 .spinner {
     width:100%;
@@ -141,20 +130,6 @@ Grands écrans d'ordinateurs et télévisions
 */
 
 
-
-@media screen and (max-width: 991px) {
-
-    .fonctionnement {
-
-    }
-
-    .restaurants {
-
-    }
-    .restaurant {
-
-    }
-}
 
 
 @media screen and (max-width: 767px) {

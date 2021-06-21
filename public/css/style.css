@@ -7,14 +7,14 @@
   box-sizing: inherit;
 }
 
+/*
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
-
+*/
 body {
   box-sizing: border-box;
   background-color: white;
-  /*width: 375px; */
   margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@ main, footer {
   padding-right: 20px;
 }
 
-main {
+header, main {
   max-width: 1200px;
 }
 
@@ -121,13 +121,13 @@ p {
 
 /* [FULL SCREEN SPINNER] */
 .spin-back {
-  position: fixed;
+  position: absolute;
+  top: 0px;
   width: 100%;
   height: 100%;
   background-color: white;
   opacity: 0.99;
-  animation: spin-back 3s ease-in forwards;
-  z-index: 2;
+  animation: spin-back 3s forwards;
 }
 
 .spin-middle {
@@ -149,9 +149,9 @@ p {
   width: 100px;
   height: 100px;
   -webkit-animation: spin 3s ease-in forwards;
-  animation: spin 3s ease-in forwards;
+  /*animation: spin 3s ease-in forwards; */
+  animation: spin 3s forwards;
   /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
-  z-index: 3;
 }
 
 @-webkit-keyframes spin {
@@ -176,8 +176,11 @@ p {
   }
 }
 @keyframes spin-back {
+  0% {
+    opacity: 0.99;
+  }
   99% {
-    opacity: 0.9;
+    opacity: 0.99;
   }
   100% {
     opacity: 0;
@@ -200,8 +203,8 @@ p {
 }
 
 .logo {
-  height: 40px;
-  line-height: 40px;
+  height: 35px;
+  line-height: 35px;
   margin: 0 auto;
   font-family: "Shrikhand";
   font-size: 3rem;
@@ -277,7 +280,6 @@ header i {
   background-color: #9356DC;
   justify-content: center;
   align-items: center;
-  position: relative;
   margin-left: -15px;
   height: 30px;
   width: 30px;
@@ -327,14 +329,6 @@ header i {
 }
 .restaurant__location {
   font-size: 15px;
-}
-
-.restaurant i {
-  /*transition: all 450ms;    ???? */
-  /*&:hover {
-      transform: scale(1.13);
-      color: $colour-primary;
-  }*/
 }
 
 .spinner {
@@ -418,8 +412,8 @@ footer li > a {
   display: flex;
   flex-direction: column;
   background-color: #F0F0F0;
-  /*padding-left: 20px;
-  padding-right: 20px;*/
+  padding-left: 20px;
+  padding-right: 20px;
   margin-top: -30px;
   padding-top: 30px;
   border-radius: 30px 30px 0 0;
