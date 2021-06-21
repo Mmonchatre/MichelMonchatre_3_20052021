@@ -127,8 +127,18 @@ p {
   background-color: white;
   opacity: 0.99;
   animation: spin-back 3s forwards;
+  animation-delay: 2.5s;
 }
 
+@keyframes spin-back {
+  0% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 .spin-middle {
   position: fixed;
   top: 50%;
@@ -149,11 +159,11 @@ p {
   height: 100px;
   -webkit-animation: spin 3s ease-in forwards;
   /*animation: spin 3s ease-in forwards; */
-  animation: spin 3s forwards;
+  animation: spin-front 3s forwards;
   /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes spin-front {
   0% {
     -webkit-transform: rotate(0deg);
   }
@@ -162,7 +172,7 @@ p {
     opacity: 0;
   }
 }
-@keyframes spin {
+@keyframes spin-front {
   0% {
     transform: rotate(0deg);
   }
@@ -172,18 +182,6 @@ p {
   100% {
     transform: rotate(360deg);
     opacity: 0;
-  }
-}
-@keyframes spin-back {
-  0% {
-    opacity: 0.99;
-  }
-  99% {
-    opacity: 0.99;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
   }
 }
 .header {
