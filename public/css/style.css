@@ -23,6 +23,10 @@ main, footer {
   padding-right: 20px;
 }
 
+main {
+  max-width: 1200px;
+}
+
 * {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -123,6 +127,7 @@ p {
   background-color: white;
   opacity: 0.99;
   animation: spin-back 3s ease-in forwards;
+  z-index: 2;
 }
 
 .spin-middle {
@@ -146,6 +151,7 @@ p {
   -webkit-animation: spin 3s ease-in forwards;
   animation: spin 3s ease-in forwards;
   /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
+  z-index: 3;
 }
 
 @-webkit-keyframes spin {
@@ -238,6 +244,9 @@ header i {
 }
 
 .fonctionnements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: white;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -245,19 +254,20 @@ header i {
 }
 
 .fonctionnements .h2_accueil, .restaurants .h2_accueil {
+  width: 100%;
   margin-left: 20px;
   margin-top: 10px;
 }
 
 .fonctionnement {
   margin: 0 auto;
-  width: 100%;
+  width: 30%;
+  min-width: 300px;
   display: flex;
   font-size: 18px;
   background-color: #F0F0F0;
   align-items: center;
   height: 70px;
-  width: 90%;
   box-shadow: 5px 5px 5px #c4c0c0;
   border-radius: 20px 20px 20px 20px;
   margin-bottom: 20px;
@@ -285,7 +295,14 @@ header i {
 }
 
 .restaurants {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 60px;
+  justify-content: space-between;
+}
+
+.restaurants h2 {
+  width: 100%;
 }
 
 .restaurant {
@@ -293,8 +310,9 @@ header i {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 10px 10px 10px grey;
-  /* box-shadow: $box-shadow-restaurant; */
   margin-bottom: 20px;
+  width: 23%;
+  min-width: 280px;
 }
 .restaurant__note {
   display: flex;
@@ -324,14 +342,33 @@ header i {
   height: 100%;
 }
 
+/* ***************************************************
+*       modifications associées au site responsive 
+******************************************************/
+/*  rappel des breaking-points :
+
+très petits écrans (< 768 px : pour les écrans dont la largeur est comprise entre 0 px et 768 px)
+Tablettes (768 px - 991 px)
+Ordinateurs (992 px - 1199 px)
+Grands écrans d'ordinateurs et télévisions
+
+*/
+@media screen and (max-width: 767px) {
+  .restaurant {
+    width: 46%;
+  }
+}
 @media screen and (max-width: 575px) {
-  .liste_plats {
+  .fonctionnements {
     flex-direction: column;
     width: 100%;
   }
 
-  .plats {
-    min-width: 300px;
+  .fonctionnement {
+    width: 90%;
+  }
+
+  .restaurant {
     width: 100%;
   }
 }
@@ -381,8 +418,8 @@ footer li > a {
   display: flex;
   flex-direction: column;
   background-color: #F0F0F0;
-  padding-left: 20px;
-  padding-right: 20px;
+  /*padding-left: 20px;
+  padding-right: 20px;*/
   margin-top: -30px;
   padding-top: 30px;
   border-radius: 30px 30px 0 0;
@@ -405,8 +442,8 @@ footer li > a {
 }
 
 .plats {
-  min-width: 300px;
-  /*width: 33%;*/
+  /*min-width: 33%; /* pour mobile */
+  width: 30%;
 }
 
 /*  animation translation prix et rotation icone */
@@ -416,7 +453,7 @@ footer li > a {
   box-shadow: 2px 2px 5px #d8d2d2;
   display: flex;
   flex-grow: 1;
-  width: 95%;
+  width: 100%;
   position: relative;
   height: 80px;
   overflow: hidden;
@@ -564,6 +601,45 @@ footer li > a {
 
 .plat:nth-child(5) {
   animation-delay: 0.4s;
+}
+
+/* ***************************************************
+*       modifications associées au site responsive 
+******************************************************/
+/*  rappel des breaking-points :
+
+très petits écrans (< 768 px : pour les écrans dont la largeur est comprise entre 0 px et 768 px)
+Tablettes (768 px - 991 px)
+Ordinateurs (992 px - 1199 px)
+Grands écrans d'ordinateurs et télévisions
+
+*/
+@media screen and (max-width: 1200px) {
+  .liste_plats {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .plats {
+    width: 30%;
+    min-width: 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .plats {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 667px) {
+  .liste_plats {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .plats {
+    min-width: 300px;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

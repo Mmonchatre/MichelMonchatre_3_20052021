@@ -8,6 +8,7 @@
     background-color: white;
     opacity: .99;
     animation: spin-back 3s ease-in forwards;
+    z-index: 2;
 }
 
 .spin-middle {
@@ -30,7 +31,7 @@
   -webkit-animation: spin 3s ease-in forwards;
   animation: spin 3s ease-in forwards;
   /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
-  
+  z-index: 3;
 }
 @-webkit-keyframes spin {
   0% {
