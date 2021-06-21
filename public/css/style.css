@@ -22,8 +22,9 @@ main, footer {
   padding-right: 20px;
 }
 
-header, main {
+header, main, .footer {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 * {
@@ -157,10 +158,8 @@ p {
   border-left: 30px solid #C9E0FF;
   width: 100px;
   height: 100px;
-  -webkit-animation: spin 3s ease-in forwards;
-  /*animation: spin 3s ease-in forwards; */
+  -webkit-animation: spin 3s forwards;
   animation: spin-front 3s forwards;
-  /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
 }
 
 @-webkit-keyframes spin-front {
@@ -211,8 +210,8 @@ p {
 }
 
 header i {
-  position: absolute;
-  top: 30px;
+  position: relative;
+  top: -45px;
   left: 20px;
   font-weight: 900;
 }
@@ -363,9 +362,13 @@ Grands écrans d'ordinateurs et télévisions
     width: 100%;
   }
 }
-.footer {
+footer {
   width: 100%;
   background-color: #353535;
+}
+
+.footer {
+  max-width: 1200px;
   color: white;
   padding-left: 20px;
   font-size: 18px;

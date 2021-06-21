@@ -40,12 +40,10 @@
   border-left: 30px solid #C9E0FF;
   width: 100px;
   height: 100px;
-  -webkit-animation: spin 3s ease-in forwards;
-  /*animation: spin 3s ease-in forwards; */
-  animation: spin-front 3s  forwards;
+  -webkit-animation: spin 3s forwards;
+  animation: spin-front 3s forwards;
   
-  
-  /* animation-timing-function: cubic-bezier(.53,.01,.2,1); */
+
   
 }
 @-webkit-keyframes spin-front {
