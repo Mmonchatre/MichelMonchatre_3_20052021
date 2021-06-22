@@ -76,8 +76,10 @@
     font-size: 16px;
   }
 
-  animation: 1000.0ms ease 00.0ms 1 normal both running plat; 
+  animation: plat 1000.0ms ease 00.0ms 1 normal both ; 
 }
+
+
 
 
 
@@ -208,7 +210,11 @@
 .plat:nth-child(5) {
     animation-delay: 0.4s;
   }
-  
+
+.plat:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
 
 /* ***************************************************
 *       modifications associées au site responsive 
