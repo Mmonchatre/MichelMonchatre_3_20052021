@@ -1,3 +1,4 @@
+
 .champ_recherche {
     background-color: $colour-recherche;
     width: 100%;
@@ -19,6 +20,8 @@
     background-color: white;
     padding-top: 20px;
     padding-bottom: 30px;
+    padding-right:20px;
+    padding-left:20px;
     margin-bottom: 30px;  
 }
 
@@ -26,14 +29,19 @@
 
 .fonctionnements .h2_accueil, .restaurants .h2_accueil {
     width:100%;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     margin-top: 10px;
+}
+
+.bouton_fonctionnement {
+    width: 30%;
+    min-width: 300px;
 }
 
 .fonctionnement {
     margin: 0 auto;
-    width: 30%;
-    min-width: 300px;
+    margin-left: 15px;
+
     display: flex;
     font-size: $font_size_restaurant_name;
     background-color: $colour-background;
@@ -63,6 +71,12 @@
     
 }
 
+.pastel_purple {
+    background-color: $pastel_purple
+  }
+
+
+
 
 .purple_icon { 
     color: $colour-primary;
@@ -74,6 +88,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 60px;
+    padding-right:20px;
+    padding-left:20px;
     justify-content: space-between;
 }
 
@@ -149,8 +165,13 @@ Grands écrans d'ordinateurs et télévisions
 
     }
 
+    .bouton_fonctionnement {
+        width:100%;
+
+
+    }
     .fonctionnement {
-        width:90%
+        width:unset
     }
 
     

@@ -17,11 +17,12 @@ body {
   margin: 0 auto;
 }
 
+/*
 main, footer {
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
+*/
 header, main, .footer {
   max-width: 1200px;
   margin: 0 auto;
@@ -58,17 +59,21 @@ h2 {
   color: black;
 }
 
+/*
 textarea {
-  font-weight: 500;
-  font-size: 2rem;
+    font-weight: 500;
+    font-size: 2rem;
 }
+
+
 
 button {
-  font-weight: 900;
-  font-style: italic;
-  font-size: 2.75rem;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.75rem;
 }
 
+*/
 .footer_title {
   font-family: "Shrikhand";
 }
@@ -249,19 +254,25 @@ header i {
   background-color: white;
   padding-top: 20px;
   padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-bottom: 30px;
 }
 
 .fonctionnements .h2_accueil, .restaurants .h2_accueil {
   width: 100%;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   margin-top: 10px;
+}
+
+.bouton_fonctionnement {
+  width: 30%;
+  min-width: 300px;
 }
 
 .fonctionnement {
   margin: 0 auto;
-  width: 30%;
-  min-width: 300px;
+  margin-left: 15px;
   display: flex;
   font-size: 18px;
   background-color: #F0F0F0;
@@ -288,6 +299,10 @@ header i {
   color: grey;
 }
 
+.pastel_purple {
+  background-color: #ecdbff;
+}
+
 .purple_icon {
   color: #9356DC;
 }
@@ -296,6 +311,8 @@ header i {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
   justify-content: space-between;
 }
 
@@ -354,8 +371,12 @@ Grands écrans d'ordinateurs et télévisions
     width: 100%;
   }
 
+  .bouton_fonctionnement {
+    width: 100%;
+  }
+
   .fonctionnement {
-    width: 90%;
+    width: unset;
   }
 
   .restaurant {
@@ -411,13 +432,13 @@ footer li > a {
 .menu {
   display: flex;
   flex-direction: column;
+  position: relative;
   background-color: #F0F0F0;
   padding-left: 20px;
   padding-right: 20px;
   margin-top: -30px;
   padding-top: 30px;
-  border-radius: 30px 30px 0 0;
-  z-index: 1;
+  border-radius: 20px 20px 0 0;
 }
 .menu__title {
   width: 100%;
