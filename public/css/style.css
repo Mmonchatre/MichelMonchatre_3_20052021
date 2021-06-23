@@ -492,6 +492,7 @@ footer li > a {
   padding-right: 0;
   transition: padding-right 300ms linear;
   margin: 0 10px;
+  margin-top: 30px;
 }
 .plat__titre {
   font-size: 18px;
@@ -560,6 +561,7 @@ footer li > a {
   background: -moz-linear-gradient(totop, #e691b8 0%, #ad0a6f 100%);
   background: -webkit-linear-gradient(to top, #e691b8 0%, #ad0a6f 100%);
   background: linear-gradient(to top, #e691b8 0%, #ad0a6f 100%);
+  pointer-events: none;
   position: relative;
   top: -19px;
   display: flex;
