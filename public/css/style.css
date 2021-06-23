@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  color: black;
 }
 
 body {
@@ -364,8 +365,12 @@ Grands écrans d'ordinateurs et télévisions
   .restaurant {
     width: 46%;
   }
-}
-@media screen and (max-width: 575px) {
+
+  /* }
+
+
+
+  @media screen and (max-width: 575px) { */
   .fonctionnements {
     flex-direction: column;
     width: 100%;
@@ -643,15 +648,10 @@ Grands écrans d'ordinateurs et télévisions
 
   .plats {
     width: 30%;
-    min-width: 300px;
+    /*  min-width: 300px; */
   }
 }
-@media screen and (max-width: 800px) {
-  .plats {
-    width: 45%;
-  }
-}
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 767px) {
   .liste_plats {
     flex-direction: column;
     width: 100%;

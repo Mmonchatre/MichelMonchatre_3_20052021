@@ -238,17 +238,14 @@ Grands écrans d'ordinateurs et télévisions
     }
     .plats {
       width: 30%;
-            min-width: 300px;
+          /*  min-width: 300px; */
         }
     }
 
-    @media screen and (max-width: 800px) {
-      .plats {
-          width: 45%;
-      }
-    }   
+    @media screen and (max-width: 767px) {
 
-    @media screen and (max-width: 667px) {
+
+
     .liste_plats {
         flex-direction: column;
         width: 100%;
