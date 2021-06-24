@@ -7,6 +7,10 @@
   box-sizing: inherit;
 }
 
+a {
+  color: black;
+}
+
 html {
   font-size: 62.5%;
   color: black;
@@ -97,7 +101,7 @@ p {
   line-height: 50px;
   text-align: center;
   color: white;
-  width: 60%;
+  width: 250px;
   border-radius: 25px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   margin-top: 40px;
@@ -115,7 +119,7 @@ p {
   text-align: center;
   font-size: 15px;
   color: white;
-  width: 70%;
+  width: 250px;
   border-radius: 22.5px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   margin-bottom: 50px;
@@ -282,6 +286,7 @@ header i {
   box-shadow: 5px 5px 5px #c4c0c0;
   border-radius: 20px 20px 20px 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .fonctionnement__cercle {
   display: flex;
@@ -328,7 +333,7 @@ header i {
   box-shadow: 10px 10px 10px grey;
   margin-bottom: 20px;
   width: 23%;
-  min-width: 280px;
+  /*min-width: 280px;*/
 }
 .restaurant__note {
   display: flex;
@@ -361,16 +366,16 @@ Ordinateurs (992 px - 1199 px)
 Grands écrans d'ordinateurs et télévisions
 
 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
+  .restaurant {
+    width: 24%;
+  }
+}
+@media screen and (max-width: 991px) {
   .restaurant {
     width: 46%;
   }
 
-  /* }
-
-
-
-  @media screen and (max-width: 575px) { */
   .fonctionnements {
     flex-direction: column;
     width: 100%;
@@ -383,7 +388,8 @@ Grands écrans d'ordinateurs et télévisions
   .fonctionnement {
     width: unset;
   }
-
+}
+@media screen and (max-width: 767px) {
   .restaurant {
     width: 100%;
   }
@@ -409,6 +415,7 @@ footer {
 footer li {
   font-size: 14px;
   list-style: none;
+  cursor: pointer;
 }
 footer li > a {
   color: white;
