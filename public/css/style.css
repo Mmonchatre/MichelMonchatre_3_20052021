@@ -555,7 +555,8 @@ footer li > a {
 
 .plat:hover .check_icon {
   transform: rotate(360deg);
-  transition: transform 300ms ease-in-out;
+  /*transition: transform 300ms ease-in-out;  */
+  transition: transform 300ms linear;
 }
 
 .heart {
