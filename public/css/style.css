@@ -364,7 +364,6 @@ très petits écrans (< 768 px : pour les écrans dont la largeur est comprise e
 Tablettes (768 px - 991 px)
 Ordinateurs (992 px - 1199 px)
 Grands écrans d'ordinateurs et télévisions
-
 */
 @media screen and (max-width: 1200px) {
   .restaurant {
@@ -373,7 +372,7 @@ Grands écrans d'ordinateurs et télévisions
 }
 @media screen and (max-width: 991px) {
   .restaurant {
-    width: 46%;
+    width: 48%;
   }
 
   .fonctionnements {

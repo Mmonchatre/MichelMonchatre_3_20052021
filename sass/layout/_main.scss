@@ -51,7 +51,6 @@
     border-radius: 20px 20px 20px 20px;
     margin-bottom: 20px;
     cursor: pointer;
-   
     &__cercle {
         display: flex;
         background-color: $colour-primary;
@@ -63,27 +62,20 @@
         border-radius: 50%;
         color: white;
     }
-
     &__icon {
         text-align: center;
         width:50px;
         color: grey;
     }
-    
 }
 
 .pastel_purple {
     background-color: $pastel_purple
   }
 
-
-
-
 .purple_icon { 
     color: $colour-primary;
 }
-
-
 
 .restaurants {
     display: flex;
@@ -105,7 +97,7 @@
     margin-bottom: 20px;
     width: 23%;
     /*min-width: 280px;*/
-    
+  
     &__note {
         display:flex;
         padding-left: $padding-left-restaurant;
@@ -113,22 +105,18 @@
         justify-content: space-between;
         align-items: center;   
     }
-
     &__name {
         font-size: $font_size_restaurant_name;
         font-weight: 700;
     }
-
     &__location {
         font-size: $font_size_restaurant_location;
     }
 }
 
-
 .spinner {
     width:100%;
     height: 100%;
-
 }
 
 
@@ -143,53 +131,34 @@ très petits écrans (< 768 px : pour les écrans dont la largeur est comprise e
 Tablettes (768 px - 991 px)
 Ordinateurs (992 px - 1199 px)
 Grands écrans d'ordinateurs et télévisions
-
 */
 
-
 @media screen and (max-width: 1200px) {
-
     .restaurant {
         width: 24%;
     }
-
 }
 
-
-
 @media screen and (max-width: 991px) {
-
     .restaurant {
-        width: 46%;
+        width: 48%;
     }
-
-
     .fonctionnements {
         flex-direction: column;
         width: 100%;
-
     }
-
     .bouton_fonctionnement {
         width:100%;
-
     }
     .fonctionnement {
         width:unset
     }
-
- 
 }
 
-
 @media screen and (max-width: 767px) {
-
-
-     
     .restaurant {
         width:100%;
     }
-
 }
 
 
